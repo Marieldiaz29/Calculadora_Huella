@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de huella ecológica</title>
+<style>
+  :root {
+    --bosque: #1f4d3a;
+    --musgo: #5a7d4a;
+    --hoja: #a7c957;
+    --arena: #eef2e3;
+    --papel: #fbfcf6;
+    --tinta: #1d2a22;
+    --suave: #5a6a5f;
+    --borde: #cfdab9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--tinta);
+    background: var(--arena);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(160deg, var(--bosque), #2d6a4f 65%, #2f7f8f 130%);
+    color: #fff;
+    text-align: center;
+    padding: 56px 20px 70px;
+  }
+  header h1 { margin: 0 0 10px; font-size: clamp(1.9rem, 6vw, 3rem); line-height: 1.1; }
+  header p { margin: 0 auto; max-width: 52ch; color: #e3efd6; font-size: 1.05rem; }
+  main { max-width: 860px; margin: -38px auto 48px; padding: 0 16px; }
+  section {
+    background: var(--papel);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 24px rgba(31, 77, 58, .12);
+  }
+  h2 { margin: 0 0 14px; font-size: 1.3rem; color: var(--bosque); }
+  .video { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #000; }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .botones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background: var(--bosque);
+    transition: background .2s;
+  }
+  .btn:hover { background: var(--musgo); }
+  .btn.sec { background: #fff; color: var(--bosque); border: 2px solid var(--bosque); }
+  .btn.sec:hover { background: #eaf3dc; }
+  .btn:focus-visible { outline: 3px solid #2f7f8f; outline-offset: 2px; }
+  ul.archivos { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  ul.archivos li {
+    display: flex; flex-direction: column;
+    padding: 12px 14px;
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--hoja);
+    border-radius: 10px;
+    background: var(--arena);
+  }
+  ul.archivos strong { word-break: break-word; }
+  ul.archivos span { color: var(--suave); font-size: .92rem; }
+  @media (min-width: 620px) { ul.archivos { grid-template-columns: 1fr 1fr; } }
+  footer { text-align: center; color: var(--suave); font-size: .9rem; padding: 0 16px 32px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Calculadora de huella ecológica</h1>
+  <p>Descubre cuántos planetas Tierra harían falta si todos vivieran como tú. Aquí está la calculadora, su código y el video del proyecto.</p>
+</header>
+
+<main>
+  <section>
+    <h2>Prueba la calculadora</h2>
+    <p>Responde el cuestionario de alimentación, transporte, energía, consumo y residuos, y recibe tu estimación.</p>
+    <div class="botones">
+      <a class="btn" href="calculadora-huella-ecologica.html">Abrir la calculadora</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Video del proyecto</h2>
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/GCW1b5GSNts"
+              title="Video del proyecto en YouTube"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="botones">
+      <a class="btn sec" href="https://youtu.be/GCW1b5GSNts?si=TafivRXiab0YJseB" target="_blank" rel="noopener">Ver en YouTube</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contenido del repositorio</h2>
+    <ul class="archivos">
+      <li><strong>calculadora-huella-ecologica.html</strong><span>Página web con el cuestionario y el cálculo</span></li>
+      <li><strong>Calculadora_Huella_Ecologica.blueprint.json</strong><span>Blueprint del escenario en Make</span></li>
+      <li><strong>Calculadora_Huella.png</strong><span>Imagen del flujo</span></li>
+      <li><strong>Reporte de resultados</strong><span>Resultados de la calculadora</span></li>
+      <li><strong>Reporte técnico</strong><span>Reporte técnico (README)</span></li>
+      <li><strong>VIDEO YT</strong><span>Enlace al video del proyecto</span></li>
+    </ul>
+    <div class="botones">
+      <!-- Cambia este enlace por la dirección completa de tu repositorio. -->
+      <a class="btn sec" href="https://github.com/Marieldiaz29" target="_blank" rel="noopener">Abrir mi GitHub</a>
+    </div>
+  </section>
+</main>
+
+<footer>Hecho por Marieldiaz29</footer>
+
+</body>
+</html>
